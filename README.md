@@ -1,6 +1,6 @@
-# Confectio
+# Confectio Light
 
-Confectio is a light syntax theme for [Atom](http://atom.io/), a nice treat for being a very good IDE.
+Confectio Light is a light syntax theme for [Atom](http://atom.io/), a nice treat for being a very good IDE.
 
 It features bright, primary colors on a light background, based on Atom One Light and inspired by syntax themes [Fizzy][fizzy] and [IR_White][irw] for TextMate, and the [Soda Theme][soda] for SublimeText.
 
@@ -21,7 +21,12 @@ _Confectio_ is a Latin declination for _composing_. In a happy coincidence, a â€
 
 ### Screenshot
 
-![Confectio syntax theme screenshot](https://www.dropbox.com/s/n684gga9z50yl71/Screenshot%202015-10-12%2016.42.06.PNG?dl=0)
+![Confectio Light syntax theme screenshot](https://raw.githubusercontent.com/Down10/Confectio/master/Confectio%20Light%20Screenshot.png)
+
+
+### See also
+
+[Confectio Dark](https://github.com/Down10/Confectio/tree/master/confectio-dark-syntax)
 
 
 [fizzy]: https://github.com/jglovier/fizzy
