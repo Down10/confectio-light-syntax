@@ -1,14 +1,14 @@
 {
   "name": "confectio-light-syntax",
   "theme": "syntax",
-  "version": "0.1.0",
-  "description": "A short description of your syntax theme",
+  "version": "0.0.0",
+  "description": "Confectio Light is a light syntax theme for Atom, a nice treat for being a very good IDE.",
   "keywords": [
     "syntax",
     "theme",
     "light"
   ],
-  "repository": "https://github.com/atom/confectio-light-syntax",
+  "repository": "https://github.com/Down10/confectio-light-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
