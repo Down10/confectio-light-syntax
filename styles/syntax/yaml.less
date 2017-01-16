@@ -1,0 +1,10 @@
+.syntax--source.syntax--yml,
+.syntax--source.syntax--yaml {
+  .syntax--string > .syntax--entity {
+    color: @blue;
+
+    & > .syntax--punctuation {
+      color: @blue-l;
+    }
+  }
+}

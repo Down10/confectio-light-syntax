@@ -1,0 +1,44 @@
+.syntax--source.syntax--css {
+  // highlight properties/values if they are supported
+  .syntax--property-name {
+    color: @dark-gray;
+
+    &.syntax--support {
+      color: @teal;
+    }
+  }
+
+  .syntax--property-value {
+    color: @gray;
+
+    &.syntax--support {
+      color: @cyan;
+    }
+  }
+
+  .syntax--keyword.syntax--control.syntax--html {
+    color: @blue;
+    font-weight: bold;
+  }
+
+  .syntax--entity.syntax--other.syntax--attribute-name {
+    color: @blue;
+
+    & .syntax--punctuation {
+      color: @blue-l;
+    }
+  }
+
+  .syntax--keyword.syntax--control.syntax--at-rule {
+    color: @purple;
+
+    & .syntax--punctuation {
+      color: @purple-l;
+    }
+  }
+
+  .syntax--keyword.syntax--other.syntax--important {
+    color: @yellow;
+    font-weight: bold;
+  }
+}

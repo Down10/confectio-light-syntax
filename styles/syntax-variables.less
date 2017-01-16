@@ -1,14 +1,12 @@
-@import "colors";
+@import "colors.less";
 
 // Official Syntax Variables -----------------------------------
-// This defines all syntax variables that syntax themes must implement when they
-// include a syntax-variables.less file.
 
 // General colors
 @syntax-text-color:            @syntax-fg;
 @syntax-cursor-color:          @syntax-accent;
-@syntax-selection-color:       @syntax-guide;
-@syntax-selection-flash-color: lighten(@syntax-accent, 20%);
+@syntax-selection-color:       lighten(@syntax-accent, 20%);
+@syntax-selection-flash-color: @syntax-accent;
 @syntax-background-color:      @syntax-bg;
 
 // Guide colors
@@ -17,8 +15,8 @@
 @syntax-invisible-character-color: @light-gray;
 
 // For find and replace markers
-@syntax-result-marker-color:          @syntax-accent;
-@syntax-result-marker-color-selected: lighten(@syntax-accent, 20%);
+@syntax-result-marker-color: fade(@syntax-accent, 24%);
+@syntax-result-marker-color-selected: @syntax-accent;
 
 // Gutter colors
 @syntax-gutter-text-color: @light-gray;
@@ -27,17 +25,32 @@
 @syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
 
 // Git colors - For git diff info. i.e. in the gutter
-@syntax-color-renamed:  hsl(208, 100%, 66%);
-@syntax-color-added:    hsl(132,  60%, 44%);
-@syntax-color-modified: hsl( 40,  90%, 50%);
-@syntax-color-removed:  hsl(  0, 100%, 54%);
+@syntax-color-renamed:  hsl(208, 100%, 66%); // #52AEFF
+@syntax-color-added:    hsl(132,  60%, 44%); // #2DB448
+@syntax-color-modified: hsl( 40,  90%, 50%); // #F2A60D
+@syntax-color-removed:  hsl(  0, 100%, 54%); // #FF1414
+
+// For language entity colors
+@syntax-color-variable:  @red;
+@syntax-color-constant:  @orange;
+@syntax-color-property:  @dark-gray;
+@syntax-color-value:     @gray;
+@syntax-color-function:  @blue;
+@syntax-color-method:    @blue-2;
+@syntax-color-class:     @orange-2;
+@syntax-color-keyword:   @purple;
+@syntax-color-tag:       @red;
+@syntax-color-attribute: @orange;
+@syntax-color-import:    @purple;
+@syntax-color-snippet:   @green;
 
 // Custom Syntax Variables -----------------------------------
 // Don't use in packages
 
-@syntax-cursor-line: fade(@syntax-fg, 4%); // needs to be semi-transparent to show search results
+@syntax-cursor-line: fade(@syntax-fg, 8%); // needs to be semi-transparent to show search results
 
 @syntax-deprecated-fg: darken(@syntax-color-modified, 30%);
 @syntax-deprecated-bg: @syntax-color-modified;
 @syntax-illegal-fg:    @syntax-bg;
 @syntax-illegal-bg:    @syntax-color-removed;
+

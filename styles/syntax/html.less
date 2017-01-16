@@ -1,0 +1,14 @@
+.syntax--source.syntax--html,
+.syntax--source.syntax--xml {
+  .syntax--tag {
+    color: @blue;
+
+    & > .syntax--entity.syntax--other.syntax--attribute-name {
+      color: @teal;
+    }
+
+    & > .syntax--punctuation {
+      color: @blue-l;
+    }
+  }
+}

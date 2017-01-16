@@ -1,0 +1,55 @@
+.syntax--source.syntax--gfm {
+  .syntax--markup {
+    -webkit-font-smoothing: auto;
+
+    &.syntax--heading {
+      color: @red;
+      font-weight: bold;
+
+      &.syntax--marker {
+        color: @red-l;
+      }
+    }
+
+    &.syntax--link {
+      color: @blue;
+      text-decoration: none;
+
+      & > .syntax--punctuation {
+        color: @blue-l;
+      }
+    }
+
+    &.syntax--code {
+      // background-color: fade(@magenta, 8%);
+      // border-radius: 3px;
+    }
+
+    &.syntax--quote {
+      background-color: fade(@orange-2, 8%);
+      border-radius: 3px;
+      font-style: italic;
+    }
+
+    &.syntax--raw {
+      color: @green;
+      background-color: fade(@green, 8%);
+      border-radius: 3px;
+
+      &.syntax--support {
+        color: @green;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .syntax--link {
+    & > .syntax--entity {
+      color: @purple;
+    }
+
+    & > .syntax--punctuation {
+      color: @purple-l;
+    }
+  }
+}

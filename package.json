@@ -2,7 +2,7 @@
   "name": "confectio-light-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "Confectio Light is a light syntax theme for Atom, a nice treat for being a very good IDE.",
+  "description": "A light syntax theme for Atom, a nice treat for being a very good text editor.",
   "keywords": [
     "syntax",
     "theme",

@@ -6,61 +6,63 @@
 @syntax-brightness:   96%;
 
 // Base colors -----------------------------------
-@syntax-accent: hsl(@syntax-hue, 71%, 47%);
-@syntax-guide:  fade(@syntax-fg, 16%);
-@syntax-fg:     @mono-1;
+@syntax-fg:     @dark-gray;
 @syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-gutter: darken(@syntax-bg, 26%);
+@syntax-guide:  fade(@syntax-fg, 16%);
+@syntax-accent: hsl(@syntax-hue, 71%, 47%); // #2378CD
 
 // Monochrome -----------------------------------
-@mono-1:  hsl(@syntax-hue, 8%, 23%);
+@mono-1:  hsl(@syntax-hue, 8%, 23%); // default text
 @mono-2:  hsl(@syntax-hue, 8%, 38%);
 @mono-3:  hsl(@syntax-hue, 8%, 60%);
 @mono-4:  hsl(@syntax-hue, 8%, 76%);
 
-@very-light-gray: hsl(@syntax-hue, 8%, 76%); // #BDC2C7;
-@light-gray:      hsl(@syntax-hue, 8%, 60%); // #9199A1;
-@gray:            hsl(@syntax-hue, 8%, 38%); // #596169;
-@dark-gray:       hsl(@syntax-hue, 8%, 23%); // #363B3F;
-@very-dark-gray:  hsl(@syntax-hue, 8%, 16%); // #26292C;
+@very-light-gray: hsl(@syntax-hue, 8%, 76%); // #BDC2C7
+@light-gray:      hsl(@syntax-hue, 8%, 60%); // #9199A1
+@gray:            hsl(@syntax-hue, 8%, 38%); // #596169
+@dark-gray:       hsl(@syntax-hue, 8%, 23%); // #363B3F
+@very-dark-gray:  hsl(@syntax-hue, 8%, 16%); // #26292C
+@black:           hsl(@syntax-hue, 8%,  9%); // #151719
 
 // Colors -----------------------------------
-@red:     hsl(  0, 67%, 40%); // #AA2222; <- Red
-@orange:  hsl( 16, 73%, 50%); // #DD5522; <- Orange
-@orange2: hsl( 32, 73%, 50%); // #DD8822; <- Orange 2
-@yellow:  hsl( 40, 86%, 53%); // #EEAA22; <- Yellow
-@green:   hsl(120, 60%, 33%); // #228822; <- Green
-@teal:    hsl(180, 56%, 30%); // #227777; <- Teal
-@cyan:    hsl(195, 67%, 40%); // #2288AA; <- Cyan
-@blue:    hsl(218, 67%, 40%); // #2255AA; <- Blue
-@blue2:   hsl(240, 67%, 40%); // #2222AA; <- Blue 2
-@purple:  hsl(270, 67%, 40%); // #6622AA; <- Purple
-@purple2: hsl(300, 67%, 40%); // #AA22AA; <- Purple 2
-@magenta: hsl(339, 67%, 40%); // #AA2255; <- Magenta
+@red:      hsl(  0, 67%, 40%); // #AA2222 <- Red
+@orange:   hsl( 16, 73%, 50%); // #DD5522 <- Orange
+@orange-2: hsl( 32, 73%, 50%); // #DD8822 <- Orange 2
+@yellow:   hsl( 40, 86%, 53%); // #EEAA22 <- Yellow
+@green:    hsl(120, 60%, 33%); // #228822 <- Green
+@teal:     hsl(180, 56%, 30%); // #227777 <- Teal
+@cyan:     hsl(195, 67%, 40%); // #2288AA <- Cyan
+@blue:     hsl(218, 67%, 40%); // #2255AA <- Blue
+@blue-2:   hsl(240, 67%, 40%); // #2222AA <- Blue 2
+@purple:   hsl(270, 67%, 40%); // #6622AA <- Purple
+@purple-2: hsl(300, 67%, 40%); // #AA22AA <- Purple 2
+@magenta:  hsl(339, 67%, 40%); // #AA2255 <- Magenta
 
 // Lightened Colors ---------------------------
-@red-l:     desaturate(lighten(@red,     20%), 20%); // #C96969;
-@orange-l:  desaturate(lighten(@orange,  20%), 20%); // #DBA08A;
-@orange2-l: desaturate(lighten(@orange2, 20%), 20%); // #DBB58A;
-@yellow-l:  desaturate(lighten(@yellow,  20%), 20%); // #E8C98D;
-@green-l:   desaturate(lighten(@green,   20%), 20%); // #69B169;
-@teal-l:    desaturate(lighten(@teal,    20%), 20%); // #52ADAD;
-@cyan-l:    desaturate(lighten(@cyan,    20%), 20%); // #69B1C9;
-@blue-l:    desaturate(lighten(@blue,    20%), 20%); // #698CC9;
-@blue2-l:   desaturate(lighten(@blue2,   20%), 20%); // #6969C9;
-@purple-l:  desaturate(lighten(@purple,  20%), 20%); // #9969C9;
-@purple2-l: desaturate(lighten(@purple2, 20%), 20%); // #C969C9;
-@magenta-l: desaturate(lighten(@magenta, 20%), 20%); // #C9698B;
+@red-l:      desaturate(lighten(@red,      20%), 20%); // #C96969
+@orange-l:   desaturate(lighten(@orange,   20%), 20%); // #DBA08A
+@orange-2-l: desaturate(lighten(@orange-2, 20%), 20%); // #DBB58A
+@yellow-l:   desaturate(lighten(@yellow,   20%), 20%); // #E8C98D
+@green-l:    desaturate(lighten(@green,    20%), 20%); // #69B169
+@teal-l:     desaturate(lighten(@teal,     20%), 20%); // #52ADAD
+@cyan-l:     desaturate(lighten(@cyan,     20%), 20%); // #69B1C9
+@blue-l:     desaturate(lighten(@blue,     20%), 20%); // #698CC9
+@blue-2-l:   desaturate(lighten(@blue-2,   20%), 20%); // #6969C9
+@purple-l:   desaturate(lighten(@purple,   20%), 20%); // #9969C9
+@purple-2-l: desaturate(lighten(@purple-2, 20%), 20%); // #C969C9
+@magenta-l:  desaturate(lighten(@magenta,  20%), 20%); // #C9698B
 
 // Faded Colors ---------------------------
-// @red-l:     fade(@red,     60%);
-// @orange-l:  fade(@orange,  60%);
-// @orange2-l: fade(@orange2, 60%);
-// @yellow-l:  fade(@yellow,  60%);
-// @green-l:   fade(@green,   60%);
-// @teal-l:    fade(@teal,    60%);
-// @cyan-l:    fade(@cyan,    60%);
-// @blue-l:    fade(@blue,    60%);
-// @blue2-l:   fade(@blue2,   60%);
-// @purple-l:  fade(@purple,  60%);
-// @purple2-l: fade(@purple2, 60%);
-// @magenta-l: fade(@magenta, 60%);
+// @red-l:      fade(@red,      60%);
+// @orange-l:   fade(@orange,   60%);
+// @orange-2-l: fade(@orange-2, 60%);
+// @yellow-l:   fade(@yellow,   60%);
+// @green-l:    fade(@green,    60%);
+// @teal-l:     fade(@teal,     60%);
+// @cyan-l:     fade(@cyan,     60%);
+// @blue-l:     fade(@blue,     60%);
+// @blue-2-l:   fade(@blue-2,   60%);
+// @purple-l:   fade(@purple,   60%);
+// @purple-2-l: fade(@purple-2, 60%);
+// @magenta-l:  fade(@magenta,  60%);
