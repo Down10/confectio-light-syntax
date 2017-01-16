@@ -18,6 +18,8 @@ By Jesse Burgheimer / @[Down10](https://github.com/down10)
 
 ### Installation
 
+Install from the command line: `apm install confectio-light-syntax`
+
 This theme can be activated by going to the __Settings > Themes__ section and selecting “Confectio Light” from the __Syntax Themes__ drop-down menu.
 
 
