@@ -11,6 +11,6 @@
   "repository": "https://github.com/Down10/confectio-light-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.0.0"
   }
 }
