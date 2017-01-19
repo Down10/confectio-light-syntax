@@ -59,11 +59,12 @@ atom-text-editor {
 
     .line-number {
       color: @syntax-gutter-text-color;
+      // font-size: 80%;
       -webkit-font-smoothing: antialiased;
 
       &.cursor-line {
-        color: @syntax-gutter-text-color-selected;
         background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
       }
 
       &.cursor-line-no-selection {
@@ -96,4 +97,10 @@ atom-text-editor {
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
   }
+}
+
+// Mini editor
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
 }

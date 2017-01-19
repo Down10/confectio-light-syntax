@@ -41,7 +41,7 @@
   }
 
   &.syntax--name.syntax--tag {
-    color: @blue;
+    color: @red;
     font-weight: bold;
   }
 
@@ -151,7 +151,7 @@
     color: darken(@red, 10%);
   }
 
-  &.syntax--parameter {
+  &.syntax--parameter.syntax--function {
     color: @syntax-text-color;
   }
 
@@ -225,7 +225,7 @@
     }
 
     &.syntax--keyword {
-      color: @blue-l;
+      color: @purple-l;
     }
 
     &.syntax--parameters,
@@ -414,6 +414,10 @@
     .syntax--punctuation.syntax--definition.syntax--heading {
       color: @blue-l;
     }
+  }
+
+  &.syntax--list {
+    color: @red;
   }
 
   &.syntax--link {
