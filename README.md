@@ -8,7 +8,7 @@ It features bright, primary colors on a light background, based on [Atom One Lig
 
 Note that this is only a syntax theme, and will not affect the Atom UI (it works with both the Light and Dark UI schemes).
 
-By Jesse Burgheimer / @[Down10](https://github.com/Down10)
+By Jesse Burgheimer / [@Down10](https://github.com/Down10)
 
 
 ## Screenshot
@@ -24,22 +24,26 @@ By Jesse Burgheimer / @[Down10](https://github.com/Down10)
 
 ### Install within Atom
 
-  1. Open __Settings__ > __Install__.
-  2. Set the filter to __Themes__.
-  3. Search for `confectio-light-syntax`.
-
+  1. Open _Settings_ > _Install_.
+  2. Set the filter to _Themes_.
+  3. Search for `confectio-light-syntax` and click __Install__ on the correct listing.
 
 ### Install with the `apm` Shell command
 
-Enter in the Terminal command line:
+In the Terminal command line, enter:
 ```shell
 apm install confectio-light-syntax
 ```
 
 ### Activation
 
-  1. Open __Settings__ > __Themes__.
-  2. Select “Confectio Light” from the __Syntax Themes__ drop-down menu.
+  1. Open _Settings_ > _Themes_.
+  2. Select “Confectio Light” from the _Syntax Themes_ drop-down menu.
+
+
+## History
+
+See [release notes](https://github.com/Down10/confectio-light-syntax/releases).
 
 
 ## About the name
