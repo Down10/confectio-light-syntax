@@ -9,7 +9,7 @@ atom-text-editor {
   }
 
   .invisible {
-    color: @syntax-text-color;
+    color: @syntax-invisible-character-color;
   }
 
   .invisible-character {
@@ -18,7 +18,6 @@ atom-text-editor {
 
   .cursor {
     border-left: 2px solid @syntax-cursor-color;
-    // color: @syntax-cursor-color;
   }
 
   .selection .region {
@@ -43,36 +42,51 @@ atom-text-editor {
   .find-result .region.region.region,
   .current-result .region.region.region {
     background-color: @syntax-result-marker-color;
-    border-radius: 3px;
-    transition: border-color 0.4s;
+    border-radius: @syntax-border-radius;
+    transition: border-color @syntax-transition-time;
   }
   .find-result .region.region.region {
     border: 2px solid transparent;
   }
   .current-result .region.region.region {
+    background-color: fadein(@syntax-result-marker-color, 8%);
     border: 2px solid @syntax-result-marker-color-selected;
-    transition-duration: 0.1s;
+    transition-duration: @syntax-transition-time;
   }
 
   .gutter {
     background-color: @syntax-gutter-background-color;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+
+    .line-numbers {
+      background: transparent !important;
+    }
 
     .line-number {
+      background: transparent;
       color: @syntax-gutter-text-color;
-      // font-size: 80%;
-      -webkit-font-smoothing: antialiased;
+      // font-size: 80%; // This doesn't work. :(
 
       &.cursor-line {
         background-color: @syntax-gutter-background-color-selected;
         color: @syntax-gutter-text-color-selected;
+        font-weight: @syntax-style-bold;
       }
 
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
+        font-weight: @syntax-style-bold;
       }
 
       .icon-right {
-        color: @syntax-text-color;
+        color: @syntax-gutter-text-color;
+        transition: all @syntax-transition-time ease-in-out;
+        opacity: 1.0;
+
+        &:hover {
+          color: @syntax-gutter-text-color-selected;
+        }
       }
     }
 
@@ -96,6 +110,16 @@ atom-text-editor {
   .gutter .line-number:after,
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
+
+    .icon-right {
+      opacity: 0.6;
+      color: @syntax-gutter-icon-color-folded;
+      transition: all @syntax-transition-time ease-in-out;
+
+      &:hover {
+        opacity: 1.0;
+      }
+    }
   }
 }
 

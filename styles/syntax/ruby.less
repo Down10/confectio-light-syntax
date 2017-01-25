@@ -2,4 +2,12 @@
   .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
     color: inherit;
   }
+
+  .syntax--variable.syntax--other.syntax--constant {
+    color: @syntax-color-constant;
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--variable {
+    color: @syntax-color-keyword;
+  }
 }

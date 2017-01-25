@@ -3,53 +3,72 @@
     -webkit-font-smoothing: auto;
 
     &.syntax--heading {
-      color: @green;
-      font-weight: bold;
+      color: @syntax-color-markup-heading;
+      font-weight: @syntax-style-bold;
 
       &.syntax--marker {
-        color: @green-l;
+        color: fade(@syntax-color-markup-heading, @syntax-fade);
       }
     }
 
     &.syntax--link {
-      color: @blue;
+      color: @syntax-color-markup-link;
       text-decoration: none;
 
+      &:hover {
+        text-decoration: underline;
+      }
+
       & > .syntax--punctuation {
-        color: @blue-l;
+        color: fade(@syntax-color-markup-link, @syntax-fade);
       }
     }
 
     &.syntax--code {
-      // background-color: fade(@magenta, 8%);
-      // border-radius: 3px;
+      color: @syntax-color-markup-code;
+      // background-color: fade(@syntax-color-markup-code, @syntax-fade-bg);
+      // border-radius: @syntax-border-radius;
     }
 
     &.syntax--quote {
-      background-color: fade(@orange-2, 8%);
-      border-radius: 3px;
-      font-style: italic;
+      background-color: fade(@syntax-color-markup-quote, @syntax-fade-bg);
+      border-radius: @syntax-border-radius;
+      font-style: @syntax-style-italic;
     }
 
     &.syntax--raw {
-      color: @green;
-      background-color: fade(@green, 8%);
-      border-radius: 3px;
+      color: @syntax-color-markup-code;
+      background-color: fade(@syntax-color-markup-code, @syntax-fade-bg);
+      border-radius: @syntax-border-radius;
 
       &.syntax--support {
-        color: @green;
-        font-weight: bold;
+        color: @syntax-color-markup-code;
+        font-weight: @syntax-style-bold;
       }
+    }
+  }
+
+  .syntax--string {
+    &.syntax--username,
+    &.syntax--issue.syntax--number {
+      color: @syntax-color-variable;
+    }
+  }
+
+  .syntax--variable {
+    &.syntax--mention,
+    &.syntax--issue.syntax--tag {
+      color: fade(@syntax-color-variable, @syntax-fade);
     }
   }
 
   .syntax--link {
     & > .syntax--entity {
-      color: @purple;
+      color: @syntax-color-markup-entity;
     }
 
     & > .syntax--punctuation {
-      color: @purple-l;
+      color: fade(@syntax-color-markup-entity, @syntax-fade);
     }
   }
 }

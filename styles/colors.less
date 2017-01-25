@@ -1,22 +1,22 @@
 // These colors are specific to the theme. Do not use in a package!
 
 // Config -----------------------------------
-@syntax-hue:          210;
-@syntax-saturation:   12%;
-@syntax-brightness:   96%;
+@syntax-hue:        210;
+@syntax-saturation: 12%;
+@syntax-brightness: 96%;
 
 // Base colors -----------------------------------
 @syntax-fg:     @dark-gray;
 @syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
-@syntax-gutter: darken(@syntax-bg, 26%);
-@syntax-guide:  fade(@syntax-fg, 16%);
-@syntax-accent: hsl(@syntax-hue, 71%, 47%); // #2378CD
+@syntax-gutter: darken(@syntax-bg, 8%);
+@syntax-guide:  fade(@syntax-fg, 8%);
+@syntax-accent: hsl(@syntax-hue, 71%, 47%); // #2277CC
 
 // Monochrome -----------------------------------
-@mono-1:  hsl(@syntax-hue, 8%, 23%); // default text
-@mono-2:  hsl(@syntax-hue, 8%, 38%);
-@mono-3:  hsl(@syntax-hue, 8%, 60%);
-@mono-4:  hsl(@syntax-hue, 8%, 76%);
+@mono-1:          hsl(@syntax-hue, 8%, 23%); // default text
+@mono-2:          hsl(@syntax-hue, 8%, 38%);
+@mono-3:          hsl(@syntax-hue, 8%, 60%);
+@mono-4:          hsl(@syntax-hue, 8%, 76%);
 
 @very-light-gray: hsl(@syntax-hue, 8%, 76%); // #BDC2C7
 @light-gray:      hsl(@syntax-hue, 8%, 60%); // #9199A1
@@ -37,32 +37,35 @@
 @blue-2:   hsl(240, 67%, 40%); // #2222AA <- Blue 2
 @purple:   hsl(270, 67%, 40%); // #6622AA <- Purple
 @purple-2: hsl(300, 67%, 40%); // #AA22AA <- Purple 2
-@magenta:  hsl(339, 67%, 40%); // #AA2255 <- Magenta
+@magenta:  hsl(338, 73%, 50%); // #DD2266 <- Magenta
+
+@link:     hsl(227, 60%, 50%); // #3355CC
+@operator: hsl(210, 50%, 60%); // #6699CC
 
 // Lightened Colors ---------------------------
-@red-l:      desaturate(lighten(@red,      20%), 20%); // #C96969
-@orange-l:   desaturate(lighten(@orange,   20%), 20%); // #DBA08A
-@orange-2-l: desaturate(lighten(@orange-2, 20%), 20%); // #DBB58A
-@yellow-l:   desaturate(lighten(@yellow,   20%), 20%); // #E8C98D
-@green-l:    desaturate(lighten(@green,    20%), 20%); // #69B169
-@teal-l:     desaturate(lighten(@teal,     20%), 20%); // #52ADAD
-@cyan-l:     desaturate(lighten(@cyan,     20%), 20%); // #69B1C9
-@blue-l:     desaturate(lighten(@blue,     20%), 20%); // #698CC9
-@blue-2-l:   desaturate(lighten(@blue-2,   20%), 20%); // #6969C9
-@purple-l:   desaturate(lighten(@purple,   20%), 20%); // #9969C9
-@purple-2-l: desaturate(lighten(@purple-2, 20%), 20%); // #C969C9
-@magenta-l:  desaturate(lighten(@magenta,  20%), 20%); // #C9698B
+// @red-l:      desaturate(lighten(@red,      20%), 20%); // #C96969
+// @orange-l:   desaturate(lighten(@orange,   20%), 20%); // #DBA08A
+// @orange-2-l: desaturate(lighten(@orange-2, 20%), 20%); // #DBB58A
+// @yellow-l:   desaturate(lighten(@yellow,   20%), 20%); // #E8C98D
+// @green-l:    desaturate(lighten(@green,    20%), 20%); // #69B169
+// @teal-l:     desaturate(lighten(@teal,     20%), 20%); // #52ADAD
+// @cyan-l:     desaturate(lighten(@cyan,     20%), 20%); // #69B1C9
+// @blue-l:     desaturate(lighten(@blue,     20%), 20%); // #698CC9
+// @blue-2-l:   desaturate(lighten(@blue-2,   20%), 20%); // #6969C9
+// @purple-l:   desaturate(lighten(@purple,   20%), 20%); // #9969C9
+// @purple-2-l: desaturate(lighten(@purple-2, 20%), 20%); // #C969C9
+// @magenta-l:  desaturate(lighten(@magenta,  20%), 20%); // #DB8AA8
 
 // Faded Colors ---------------------------
-// @red-l:      fade(@red,      60%);
-// @orange-l:   fade(@orange,   60%);
-// @orange-2-l: fade(@orange-2, 60%);
-// @yellow-l:   fade(@yellow,   60%);
-// @green-l:    fade(@green,    60%);
-// @teal-l:     fade(@teal,     60%);
-// @cyan-l:     fade(@cyan,     60%);
-// @blue-l:     fade(@blue,     60%);
-// @blue-2-l:   fade(@blue-2,   60%);
-// @purple-l:   fade(@purple,   60%);
-// @purple-2-l: fade(@purple-2, 60%);
-// @magenta-l:  fade(@magenta,  60%);
+@red-l:      fade(@red,      60%);
+@orange-l:   fade(@orange,   60%);
+@orange-2-l: fade(@orange-2, 60%);
+@yellow-l:   fade(@yellow,   60%);
+@green-l:    fade(@green,    60%);
+@teal-l:     fade(@teal,     60%);
+@cyan-l:     fade(@cyan,     60%);
+@blue-l:     fade(@blue,     60%);
+@blue-2-l:   fade(@blue-2,   60%);
+@purple-l:   fade(@purple,   60%);
+@purple-2-l: fade(@purple-2, 60%);
+@magenta-l:  fade(@magenta,  60%);

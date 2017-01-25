@@ -1,0 +1,466 @@
+// Language syntax highlighting
+
+.syntax--comment {
+  color: @syntax-color-comment;
+  font-style: @syntax-style-italic;
+
+  .syntax--markup.syntax--link {
+    color: @syntax-color-comment;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-comment, @syntax-fade);
+  }
+}
+
+.syntax--entity {
+  color: @syntax-color-class;
+
+  &.syntax--name.syntax--function,
+  &.syntax--name.syntax--type.syntax--function {
+    color: @syntax-color-function;
+    // font-weight: @syntax-style-bold;
+  }
+
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @syntax-color-class;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @syntax-color-keyword;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @syntax-color-tag;
+  }
+
+  &.syntax--name.syntax--type {
+    color: @syntax-color-type;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @syntax-color-class;
+    font-style: @syntax-style-italic;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @syntax-color-attribute;
+
+    &.syntax--id {
+      color: @syntax-color-attribute-id;
+      font-weight: @syntax-style-bold;
+    }
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-class, @syntax-fade);
+  }
+}
+
+.syntax--keyword {
+  color: @syntax-color-keyword;
+
+  &.syntax--control {
+    color: @syntax-color-keyword;
+    font-weight: @syntax-style-bold;
+  }
+
+  &.syntax--operator {
+    color: @syntax-color-operator;
+  }
+
+  &.syntax--other.syntax--special-method {
+    color: @syntax-color-method;
+  }
+
+  &.syntax--other.syntax--unit {
+    color: fade(@syntax-color-numeric, @syntax-fade);
+    // color: saturate(darken(@orange, 20%), 20%);
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-keyword, @syntax-fade);
+  }
+}
+
+.syntax--storage {
+  color: @syntax-color-storage;
+
+  &.syntax--type {
+    &.syntax--annotation,
+    &.syntax--primitive {
+      color: @syntax-color-annotation;
+    }
+  }
+
+  &.syntax--modifier {
+    font-style: @syntax-style-italic;
+
+    &.syntax--package,
+    &.syntax--import {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.syntax--function {
+    font-weight: @syntax-style-bold;
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-storage, @syntax-fade);
+  }
+}
+
+.syntax--constant {
+  color: @syntax-color-constant;
+
+  &.syntax--variable {
+    color: @syntax-color-variable;
+  }
+
+  &.syntax--character.syntax--escape {
+    color: @syntax-color-escape;
+    background-color: fade(@syntax-color-escape, @syntax-fade-bg);
+    border-radius: @syntax-border-radius;
+  }
+
+  &.syntax--numeric,
+  &.syntax--boolean {
+    color: @syntax-color-numeric;
+  }
+
+  &.syntax--other.syntax--color,
+  &.syntax--language {
+    color: @syntax-color-language;
+  }
+
+  &.syntax--other.syntax--symbol {
+    color: @syntax-color-string;
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-constant, @syntax-fade);
+  }
+}
+
+.syntax--variable {
+  color: @syntax-color-variable;
+
+  &.syntax--interpolation {
+    color: darken(@syntax-color-variable, 10%);
+  }
+
+  &.syntax--parameter.syntax--function {
+    color: @syntax-text-color;
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-variable, @syntax-fade);
+  }
+}
+
+.syntax--string {
+  color: @syntax-color-string;
+
+  &.syntax--regexp {
+    color: @syntax-color-regexp;
+    background-color: fade(@syntax-color-regexp, @syntax-fade-bg);
+    border-radius: @syntax-border-radius;
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @syntax-color-embedded;
+    }
+  }
+
+  &.syntax--other.syntax--link {
+    color: @syntax-color-markup-link;
+  }
+
+  & > .syntax--constant {
+    color: @syntax-color-constant;
+    // background-color: fade(@syntax-color-constant, @syntax-fade-bg);
+
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-constant, @syntax-fade);
+    }
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-string, @syntax-fade);
+  }
+}
+
+.syntax--punctuation {
+  color: @syntax-color-punctuation;
+
+  &.syntax--definition {
+    &.syntax--comment {
+      color: fade(@syntax-color-comment, @syntax-fade);
+    }
+
+    &.syntax--method-parameters,
+    &.syntax--function-parameters {
+      color: fade(@syntax-color-function, @syntax-fade);
+    }
+
+    &.syntax--separator,
+    &.syntax--seperator {
+      color: @syntax-color-punctuation;
+    }
+
+    &.syntax--string {
+      color: fade(@syntax-color-string, @syntax-fade);
+    }
+
+    &.syntax--variable {
+      color: fade(@syntax-color-variable, @syntax-fade);
+    }
+
+    &.syntax--constant {
+      color: fade(@syntax-color-constant, @syntax-fade);
+    }
+
+    &.syntax--entity {
+      color: fade(@syntax-color-markup-entity, @syntax-fade);
+    }
+
+    &.syntax--keyword {
+      color: fade(@syntax-color-keyword, @syntax-fade);
+    }
+
+    &.syntax--parameters,
+    &.syntax--array {
+      color: @syntax-color-punctuation;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity,
+    &.syntax--tag {
+      color: fade(@syntax-color-markup-heading, @syntax-fade);
+    }
+
+    &.syntax--bold {
+      font-weight: @syntax-style-bold;
+    }
+
+    &.syntax--italic {
+      font-style: @syntax-style-italic;
+    }
+  }
+
+  &.syntax--section {
+    &.syntax--embedded {
+      color: fade(@syntax-color-embedded, @syntax-fade);
+    }
+
+    &.syntax--method,
+    &.syntax--class,
+    &.syntax--inner-class {
+      color: @syntax-color-punctuation;
+    }
+
+    &.syntax--function {
+      color: fade(@syntax-color-function, @syntax-fade);
+    }
+  }
+}
+
+.syntax--support {
+  color: @syntax-color-support;
+
+  &.syntax--class,
+  &.syntax--type {
+    color: mix(@syntax-color-support, @syntax-color-class, 33%);
+  }
+
+  &.syntax--function,
+  &.syntax--type.syntax--function {
+    color: mix(@syntax-color-support, @syntax-color-function, 33%);
+
+    &.syntax--any-method {
+      color: mix(@syntax-color-support, @syntax-color-method, 33%);
+    }
+  }
+
+  &.syntax--variable,
+  &.syntax--type.syntax--variable {
+    color: mix(@syntax-color-support, @syntax-color-variable, 33%);
+  }
+
+  &.syntax--constant,
+  &.syntax--type.syntax--constant {
+    color: mix(@syntax-color-support, @syntax-color-constant, 33%);
+  }
+
+  & > .syntax--punctuation {
+    color: fade(@syntax-color-support, @syntax-fade);
+  }
+}
+
+.syntax--meta {
+  &.syntax--class {
+    color: @syntax-color-class;
+
+    &.syntax--body {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.syntax--method-call,
+  &.syntax--method {
+    color: @syntax-text-color;
+  }
+
+  &.syntax--definition {
+    &.syntax--variable {
+      color: @syntax-color-variable;
+    }
+  }
+
+  &.syntax--link {
+    color: @syntax-color-markup-link;
+  }
+
+  &.syntax--require {
+    color: @syntax-color-require;
+  }
+
+  &.syntax--selector {
+    color: @syntax-color-selector;
+  }
+
+  &.syntax--separator {
+    background-color: @very-light-gray;
+    color: @syntax-text-color;
+  }
+
+  &.syntax--tag {
+    color: @syntax-color-tag;
+
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-tag, @syntax-fade);
+    }
+  }
+
+  & > .syntax--punctuation,
+  &.syntax--brace,
+  &.syntax--bracket,
+  &.syntax--paren,
+  &.syntax--delimiter,
+  &.syntax--object.syntax--delimiter {
+    color: @syntax-color-punctuation;
+  }
+}
+
+.syntax--underline {
+  text-decoration: underline;
+}
+
+.syntax--none {
+  color: @syntax-text-color;
+}
+
+.syntax--invalid {
+  &.syntax--deprecated {
+    color: @syntax-deprecated-fg !important;
+    background-color: @syntax-deprecated-bg !important;
+    text-decoration: line-through !important;
+    border-radius: @syntax-border-radius;
+  }
+
+  &.syntax--illegal {
+    color: @syntax-illegal-fg !important;
+    background-color: @syntax-illegal-bg !important;
+    border-radius: @syntax-border-radius;
+  }
+
+  &.syntax--warning {
+    background-color: @syntax-deprecated-bg !important;
+    border-radius: @syntax-border-radius;
+  }
+}
+
+// Languages -------------------------------------------------
+
+.syntax--markup {
+  &.syntax--bold {
+    font-weight: @syntax-style-bold;
+  }
+
+  &.syntax--code {
+    color: @syntax-color-markup-code;
+  }
+
+  &.syntax--changed {
+    color: @syntax-color-modified;
+  }
+
+  &.syntax--deleted {
+    color: @syntax-color-removed;
+  }
+
+  &.syntax--italic {
+    font-style: @syntax-style-italic;
+  }
+
+  &.syntax--heading {
+    color: @syntax-color-markup-heading;
+
+    .syntax--marker {
+      color: @syntax-color-markup-heading-marker;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--heading {
+      color: fade(@syntax-color-markup-heading, @syntax-fade);
+    }
+  }
+
+  &.syntax--list {
+    color: @syntax-color-markup-entity;
+  }
+
+  &.syntax--link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.syntax--inserted {
+    color: @syntax-color-added;
+  }
+
+  &.syntax--quote {
+    color: @syntax-color-markup-quote;
+  }
+
+  &.syntax--underline.syntax--link {
+    color: @syntax-color-markup-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-markup-link, @syntax-fade);
+      text-decoration: none;
+    }
+  }
+
+  &.syntax--raw {
+    background-color: fade(@syntax-color-markup-code, @syntax-fade-bg);
+    border-radius: @syntax-border-radius;
+
+    &.syntax--inline {
+      color: @syntax-color-markup-code;
+    }
+  }
+}

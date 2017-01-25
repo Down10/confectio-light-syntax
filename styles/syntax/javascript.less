@@ -1,6 +1,6 @@
 .syntax--source.syntax--js {
   .syntax--keyword.syntax--operator {
-    color: @cyan;
+    color: @syntax-color-operator;
 
     // keywords are definded in https://github.com/atom/language-javascript/blob/master/grammars/javascript.cson
     // search "instanceof" for location
@@ -11,7 +11,14 @@
     &.syntax--new,
     &.syntax--typeof,
     &.syntax--void {
-      color: @purple;
+      color: @syntax-color-operator;
+      font-weight: @syntax-style-bold;
     }
+  }
+}
+
+.syntax--source.syntax--js.syntax--jsx {
+  .syntax--variable.syntax--other.syntax--class {
+    color: @syntax-color-class;
   }
 }

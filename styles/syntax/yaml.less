@@ -1,10 +1,18 @@
 .syntax--source.syntax--yml,
 .syntax--source.syntax--yaml {
-  .syntax--string > .syntax--entity {
-    color: @blue;
+  .syntax--entity.syntax--name.syntax--tag {
+    color: @syntax-color-tag;
 
     & > .syntax--punctuation {
-      color: @blue-l;
+      color: fade(@syntax-color-tag, @syntax-fade)
+    }
+  }
+
+  .syntax--string > .syntax--entity {
+    color: @syntax-color-class;
+
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-class, @syntax-fade);
     }
   }
 }

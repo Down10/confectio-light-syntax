@@ -5,24 +5,28 @@
 // General colors
 @syntax-text-color:            @syntax-fg;
 @syntax-cursor-color:          @syntax-accent;
-@syntax-selection-color:       lighten(@syntax-accent, 20%);
+@syntax-selection-color:       fade(@syntax-accent, 20%);
 @syntax-selection-flash-color: @syntax-accent;
 @syntax-background-color:      @syntax-bg;
 
 // Guide colors
-@syntax-wrap-guide-color:          @light-gray;
+@syntax-cursor-line:               fade(@syntax-fg, 6%); // needs to be semi-transparent to show search results
+@syntax-wrap-guide-color:          @very-light-gray;
 @syntax-indent-guide-color:        @very-light-gray;
 @syntax-invisible-character-color: @light-gray;
 
 // For find and replace markers
-@syntax-result-marker-color: fade(@syntax-accent, 24%);
+@syntax-bracket-matcher-color:        @syntax-accent;
+@syntax-result-marker-color:          fade(@syntax-accent, 24%);
 @syntax-result-marker-color-selected: @syntax-accent;
 
 // Gutter colors
-@syntax-gutter-text-color: @light-gray;
-@syntax-gutter-text-color-selected: darken(@syntax-gutter-text-color, 8%);
-@syntax-gutter-background-color: darken(@syntax-bg, 4%);
-@syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
+@syntax-gutter-background-color:          @syntax-bg;
+@syntax-gutter-background-color-selected: darken(@syntax-bg, 10%);
+@syntax-gutter-icon-color-folded:         fade(@syntax-fg, 60%);
+@syntax-gutter-text-color:                @gray;
+@syntax-gutter-text-color-selected:       darken(@syntax-gutter-text-color, 12%);
+@syntax-gutter-text-color-subtle:         @syntax-gutter-text-color;
 
 // Git colors - For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 66%); // #52AEFF
@@ -30,27 +34,73 @@
 @syntax-color-modified: hsl( 40,  90%, 50%); // #F2A60D
 @syntax-color-removed:  hsl(  0, 100%, 54%); // #FF1414
 
-// For language entity colors
-@syntax-color-variable:  @red;
-@syntax-color-constant:  @orange;
-@syntax-color-property:  @dark-gray;
-@syntax-color-value:     @gray;
-@syntax-color-function:  @blue;
-@syntax-color-method:    @blue-2;
-@syntax-color-class:     @orange-2;
-@syntax-color-keyword:   @purple;
-@syntax-color-tag:       @red;
-@syntax-color-attribute: @teal;
-@syntax-color-import:    @purple;
-@syntax-color-snippet:   @green;
+// Language Entities ---------------------
+@syntax-color-annotation:   @yellow;
+@syntax-color-attribute:    @teal;
+@syntax-color-attribute-id: @orange-2;
+@syntax-color-class:        @orange-2;
+@syntax-color-comment:      @light-gray;
+@syntax-color-constant:     @orange;
+@syntax-color-embedded:     @purple;
+@syntax-color-escape:       @orange;
+@syntax-color-function:     @blue;
+@syntax-color-import:       @purple-2;
+@syntax-color-keyword:      @purple;
+@syntax-color-language:     @orange-2;
+@syntax-color-method:       @blue-2;
+@syntax-color-numeric:      @orange;
+@syntax-color-operator:     @operator;
+@syntax-color-placeholder:  @orange;
+@syntax-color-preprocessor: @purple-2;
+@syntax-color-primitive:    @yellow;
+@syntax-color-property:     @dark-gray;
+@syntax-color-punctuation:  @gray;
+@syntax-color-regexp:       @teal;
+@syntax-color-require:      @purple-2;
+@syntax-color-selector:     @blue;
+@syntax-color-snippet:      @green;
+@syntax-color-storage:      @purple-2;
+@syntax-color-string:       @green;
+@syntax-color-support:      @magenta;
+@syntax-color-tag:          @red;
+@syntax-color-type:         @orange-2;
+@syntax-color-unit:         @orange;
+@syntax-color-value:        @gray;
+@syntax-color-variable:     @red;
+
+// Custom Language Entities
+@syntax-color-css-property:          @teal;
+@syntax-color-css-value:             @cyan;
+@syntax-color-css-important:         @yellow;
+@syntax-color-gfm-hr:                @red;
+@syntax-color-gfm-link:              @link;
+@syntax-color-gfm-punctuation:       @red;
+@syntax-color-java-bracket-angle:    @operator;
+@syntax-color-markup-code:           @magenta;
+@syntax-color-markup-entity:         @orange;
+@syntax-color-markup-heading:        @blue;
+@syntax-color-markup-heading-marker: @blue-l;
+@syntax-color-markup-link:           @link;
+@syntax-color-markup-quote:          @orange-2;
+
 
 // Custom Syntax Variables -----------------------------------
 // Don't use in packages
-
-@syntax-cursor-line: fade(@syntax-fg, 8%); // needs to be semi-transparent to show search results
 
 @syntax-deprecated-fg: darken(@syntax-color-modified, 30%);
 @syntax-deprecated-bg: @syntax-color-modified;
 @syntax-illegal-fg:    @syntax-bg;
 @syntax-illegal-bg:    @syntax-color-removed;
 
+// Syntax visual enhancements --------------------------------
+@syntax-transition-time: 250ms;
+@syntax-border-radius:   3px;
+@syntax-style-bold:      600; // A bit lighter than the default 700 weight.
+@syntax-style-italic:    italic; // Could be set to "normal"
+@syntax-fade:            60%;
+@syntax-fade-bg:         8%;
+
+// Fade mixins -------------------
+// @c: inherit;
+// .fade(@c): fadeout(@c, @syntax-fade);
+// .fade-bg(@bgc): fadeout(@bgc, @syntax-fade-bg);

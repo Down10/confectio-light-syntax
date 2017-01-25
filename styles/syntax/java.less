@@ -1,26 +1,59 @@
 .syntax--source.syntax--java {
+  .syntax--keyword.syntax--operator.syntax--instanceof {
+    color: @syntax-color-keyword;
+  }
+
+  .syntax--punctuation.syntax--bracket.syntax--angle {
+    color: @syntax-color-operator;
+  }
+
   .syntax--storage {
     &.syntax--modifier.syntax--import {
-      color: @orange-2;
+      color: @syntax-color-import;
     }
 
     &.syntax--type {
-      color: @orange-2;
-    }
+      color: @syntax-color-class;
 
-    .syntax--keyword.syntax--operator.syntax--instanceof {
-      color: @purple;
+      &.syntax--annotation {
+        color: @syntax-color-annotation;
+      }
+
+      &.syntax--primitive {
+        color: @syntax-color-primitive;
+      }
+    }
+  }
+}
+
+.syntax--source.syntax--scala {
+  .syntax--entity.syntax--name.syntax--package {
+    color: @syntax-color-class;
+  }
+
+  .syntax--meta.syntax--import {
+    color: @syntax-color-class;
+
+    .syntax--variable {
+      color: @syntax-color-class;
+    }
+  }
+
+  .syntax--scala.syntax--type {
+    color: @syntax-color-class;
+
+    .syntax--class {
+      color: @syntax-color-class;
     }
   }
 }
 
 .syntax--source.syntax--java-properties {
   .syntax--meta.syntax--key-pair {
-    color: @red;
+    color: @syntax-color-keyword;
 
     & > .syntax--punctuation {
-      color: @red-l;
+      color: fade(@syntax-color-keyword, @syntax-fade);
     }
   }
 }
-

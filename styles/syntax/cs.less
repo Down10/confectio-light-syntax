@@ -1,5 +1,15 @@
 .syntax--source.syntax--cs {
   .syntax--keyword.syntax--operator {
-    color: @purple;
+    color: @syntax-color-keyword;
+  }
+
+  .syntax--meta {
+    &.syntax--method.syntax--annotation {
+      color: @syntax-color-annotation;
+    }
+
+    &.syntax--namespace.syntax--body {
+      color: @syntax-color-class;
+    }
   }
 }

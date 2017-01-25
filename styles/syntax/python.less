@@ -1,17 +1,25 @@
 .syntax--source.syntax--python {
   .syntax--keyword.syntax--operator {
-    color: @cyan;
+    color: @syntax-color-operator;
   }
 
   .syntax--function.syntax--decorator.syntax--arguments {
-    color: @cyan;
+    color: @syntax-color-variable;
+  }
+
+  .syntax--meta.syntax--function-call {
+    color: @syntax-color-function;
+
+    &.syntax--arguments {
+      color: @syntax-color-variable;
+    }
   }
 
   .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
-    color: @purple;
+    color: @syntax-color-import;
   }
 
   .syntax--variable.syntax--parameter {
-    color: @orange;
+    color: @syntax-color-variable;
   }
 }

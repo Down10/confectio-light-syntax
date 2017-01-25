@@ -1,14 +1,38 @@
 .syntax--source.syntax--html,
 .syntax--source.syntax--xml {
+  .syntax--constant.syntax--character {
+    &.syntax--entity,
+    .syntax--punctuation.syntax--definition {
+      color: @syntax-color-class;
+    }
+  }
+
+  .syntax--entity.syntax--name.syntax--tag.syntax--namespace {
+    color: @syntax-color-attribute;
+  }
+
+  .syntax--meta.syntax--tag.syntax--doctype {
+    color: @syntax-color-preprocessor;
+  }
+
+  .syntax--string.syntax--unquoted.syntax--cdata {
+    color: @syntax-color-comment;
+
+    .syntax--punctuation.syntax--definition {
+      color: @syntax-color-comment;
+      font-weight: @syntax-style-bold;
+    }
+  }
+
   .syntax--tag {
-    color: @blue;
+    color: @syntax-color-selector;
 
     & > .syntax--entity.syntax--other.syntax--attribute-name {
-      color: @teal;
+      color: @syntax-color-attribute;
     }
 
     & > .syntax--punctuation {
-      color: @blue-l;
+      color: fade(@syntax-color-selector, @syntax-fade);
     }
   }
 }

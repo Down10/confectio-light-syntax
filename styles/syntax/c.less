@@ -1,5 +1,24 @@
-.syntax--source.syntax--c {
+.syntax--source.syntax--c,
+.syntax--source.syntax--cpp {
   .syntax--keyword.syntax--operator {
-    color: @purple;
+    color: @syntax-color-operator;
+  }
+
+  .syntax--meta.syntax--preprocessor {
+    color: @syntax-color-preprocessor;
+  }
+
+  .syntax--punctuation {
+    &.syntax--definition.syntax--directive {
+      color: fade(@syntax-color-keyword, @syntax-fade);
+    }
+
+    &.syntax--separator.syntax--pointer-access {
+      color: @syntax-color-operator;
+    }
+  }
+
+  .syntax--string.syntax--include {
+    color: @syntax-color-class;
   }
 }

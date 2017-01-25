@@ -1,44 +1,91 @@
-.syntax--source.syntax--css {
+.syntax--source.syntax--css,
+.syntax--source.syntax--css.syntax.less,
+.syntax--source.syntax--css.syntax.scss,
+.syntax--source.syntax--css.syntax.sass {
+  .syntax--meta {
+    &.syntax--at-rule {
+      color: @syntax-color-import;
+
+      .syntax--punctuation.syntax--definition.syntax--keyword {
+        color: fade(@syntax-color-import, @syntax-fade);
+      }
+
+      & > .syntax--string.syntax--quoted {
+        color: @syntax-color-string;
+      }
+
+      & > .syntax--punctuation {
+        color: fade(@syntax-color-import, @syntax-fade);
+      }
+    }
+
+    &.syntax--property-value {
+      .syntax--punctuation.syntax--definition.syntax--constant {
+        color: @syntax-color-keyword;
+      }
+    }
+  }
+
+  .syntax--support {
+    &.syntax--constant.syntax--property.syntax--value {
+      color: @syntax-color-css-value;
+    }
+
+    &.syntax--type.syntax--property-name {
+      color: @syntax-color-css-property;
+    }
+  }
+
   // highlight properties/values if they are supported
   .syntax--property-name {
-    color: @dark-gray;
+    color: @syntax-color-property;
 
     &.syntax--support {
-      color: @teal;
+      color: @syntax-color-css-property;
     }
   }
 
   .syntax--property-value {
-    color: @gray;
+    color: @syntax-color-value;
 
     &.syntax--support {
-      color: @cyan;
+      color: @syntax-color-css-value;
     }
   }
 
   .syntax--keyword.syntax--control.syntax--html {
-    color: @blue;
-    font-weight: bold;
+    color: @syntax-color-selector;
+    font-weight: @syntax-style-bold;
   }
 
   .syntax--entity.syntax--other.syntax--attribute-name {
-    color: @blue;
+    color: @syntax-color-selector;
+
+    &.syntax--pseudo-element {
+      color: fade(@syntax-color-selector, @syntax-fade);
+    }
 
     & .syntax--punctuation {
-      color: @blue-l;
+      color: fade(@syntax-color-selector, @syntax-fade);
     }
   }
 
   .syntax--keyword.syntax--control.syntax--at-rule {
-    color: @purple;
+    color: @syntax-color-import;
 
-    & .syntax--punctuation {
-      color: @purple-l;
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-import, @syntax-fade);
     }
   }
 
   .syntax--keyword.syntax--other.syntax--important {
-    color: @yellow;
-    font-weight: bold;
+    color: @syntax-color-css-important;
+    font-weight: @syntax-style-bold;
+  }
+}
+
+.syntax--source.syntax--css.syntax--less {
+  .syntax--mixin {
+    color: @syntax-color-function;
   }
 }
