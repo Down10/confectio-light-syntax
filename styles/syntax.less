@@ -172,14 +172,20 @@
     color: @syntax-color-regexp;
     background-color: fade(@syntax-color-regexp, @syntax-fade-bg);
     border-radius: @syntax-border-radius;
-
-    .syntax--source.syntax--ruby.syntax--embedded {
-      color: @syntax-color-embedded;
-    }
   }
 
   &.syntax--other.syntax--link {
     color: @syntax-color-markup-link;
+  }
+
+  & > .syntax--source.syntax--ruby.syntax--embedded,
+  & > .syntax--source.syntax--coffee.syntax--embedded,
+  & > .syntax--source.syntax--javascript.syntax--embedded {
+    color: @syntax-color-embedded;
+
+    & > .syntax--punctuation {
+      color: fade(@syntax-color-embedded, @syntax-fade);
+    }
   }
 
   & > .syntax--constant {
