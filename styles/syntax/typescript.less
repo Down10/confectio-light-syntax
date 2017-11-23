@@ -1,0 +1,34 @@
+.syntax--source.syntax--ts {
+    .syntax--punctuation.syntax--decorator,
+    .syntax--meta.syntax--decorator .syntax--variable.syntax--other.syntax--readwrite,
+    .syntax--meta.syntax--decorator .syntax--entity.syntax--name.syntax--function {
+        color: @syntax-color-variable;
+    }
+
+    .syntax--meta.syntax--object-literal.syntax--key {
+        color: @syntax-text-color;
+
+        .syntax--entity.syntax--name.syntax--function {
+            color: @syntax-color-function;
+        }
+    }
+
+    .syntax--support.syntax--class,
+    .syntax--support.syntax--type,
+    .syntax--entity.syntax--name.syntax--class,
+    .syntax--entity.syntax--name.syntax--type {
+        color: @syntax-color-class;
+    }
+
+    .syntax--support.syntax--constant {
+        &.syntax--math,
+        &.syntax--dom,
+        &.syntax--json {
+            color: @syntax-color-constant;
+        }
+    }
+
+    .syntax--support.syntax--variable {
+        color: @syntax-color-variable;
+    }
+}
